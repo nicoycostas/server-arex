@@ -1,0 +1,934 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; }
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0; }
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0; }
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5; }
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none; }
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto; }
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block; }
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em; }
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit; }
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important; } }
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0; }
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline; }
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none; }
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Lato', sans-serif; }
+
+html, body {
+  overflow-x: hidden; }
+
+body {
+  width: 100%; }
+
+.wrapper {
+  width: 85%;
+  margin: 0 auto; }
+
+header {
+  grid-area: header;
+  background-color: black;
+  position: relative;
+  height: 113vh; }
+  header .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    height: 100px; }
+  header video {
+    width: 100%;
+    opacity: 0.2;
+    max-height: 100%; }
+  header .header-heading {
+    color: white;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 95vw;
+    height: 100vh;
+    display: flex; }
+    header .header-heading .hgroup {
+      margin: auto; }
+      header .header-heading .hgroup h1 {
+        font-size: 5vw;
+        line-height: 2vh;
+        text-shadow: 4px 4px 2px #1b1b1b; }
+      header .header-heading .hgroup h2 {
+        font-size: 2.5vw;
+        max-width: 600px;
+        margin: 0 auto;
+        font-weight: 300;
+        text-shadow: 4px 4px 2px #1b1b1b; }
+      header .header-heading .hgroup a {
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        padding: 10px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: all 0.5s;
+        margin: 40px 0 0 0;
+        display: inline-block;
+        width: 180px; }
+        header .header-heading .hgroup a:hover {
+          background-color: white;
+          color: black;
+          border: 1px solid black; }
+      header .header-heading .hgroup .images {
+        display: flex;
+        justify-content: center; }
+        header .header-heading .hgroup .images img {
+          width: 60px;
+          height: 60px;
+          margin: 0px 10px 20px 0;
+          border-radius: 5%;
+          outline: 1px solid rgba(60, 84, 155, 0.486); }
+
+.intro {
+  grid-area: intro;
+  color: black; }
+  .intro article {
+    padding: 70px 0;
+    width: 60%;
+    margin: 0 auto; }
+    .intro article h2 {
+      font-size: 5vw;
+      max-width: 83%;
+      text-align: center;
+      position: relative;
+      font-weight: 300;
+      margin: 0 auto; }
+      .intro article h2::before {
+        display: inline-block;
+        content: "";
+        border-top: .3rem solid black;
+        width: 4rem;
+        position: absolute;
+        left: 0;
+        top: 50%; }
+      .intro article h2::after {
+        display: inline-block;
+        content: "";
+        border-top: .3rem solid black;
+        width: 4rem;
+        position: absolute;
+        right: 0;
+        top: 50%; }
+    .intro article iframe {
+      margin: 0 auto;
+      margin-top: 0px;
+      margin-right: auto;
+      margin-bottom: 0px;
+      margin-left: auto;
+      text-align: center;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      margin-top: 58px; }
+
+.about-text {
+  grid-area: about-text;
+  color: #c4c4c4;
+  background-color: #252525; }
+  .about-text article {
+    width: 63%;
+    margin: 0 auto;
+    margin: 40px;
+    /* padding: 0 0 0 110px; */
+    margin: 80px auto -33px auto; }
+    .about-text article h3 {
+      color: #fffdfd;
+      font-size: 2vw;
+      font-weight: 300;
+      position: relative; }
+      .about-text article h3 i {
+        color: whitesmoke;
+        position: absolute;
+        right: 10px;
+        left: -78px;
+        top: 16px; }
+    .about-text article p {
+      font-size: 1vw;
+      color: white;
+      font-weight: 300; }
+
+.about-map {
+  grid-area: about-map;
+  color: #c4c4c4;
+  background-color: #252525; }
+
+.nasa-request-text {
+  grid-area: nasa-request-text;
+  padding: 40px 0; }
+  .nasa-request-text h2 {
+    font-size: 5vw;
+    max-width: 70%;
+    text-align: center;
+    position: relative;
+    font-weight: 300;
+    margin: 0 auto;
+    text-transform: uppercase; }
+    .nasa-request-text h2::before {
+      display: inline-block;
+      content: "";
+      border-top: .3rem solid black;
+      width: 4rem;
+      position: absolute;
+      left: 0;
+      top: 50%; }
+    .nasa-request-text h2::after {
+      display: inline-block;
+      content: "";
+      border-top: .3rem solid black;
+      width: 4rem;
+      position: absolute;
+      right: 0;
+      top: 50%; }
+  .nasa-request-text article {
+    padding: 50px 111px;
+    width: 93%;
+    margin: 0 auto; }
+  .nasa-request-text .download {
+    color: black;
+    border: 1px solid black;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 40px;
+    transition: all 0.5s;
+    display: inline-block; }
+    .nasa-request-text .download:hover {
+      background-color: #222222;
+      color: white;
+      border: 1px solid white; }
+
+.nasa-request-photo {
+  grid-area: nasa-request-photo;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  position: relative; }
+  .nasa-request-photo iframe {
+    width: 750px;
+    height: 600px;
+    margin: 80px auto; }
+
+footer {
+  grid-area: footer;
+  background-color: #1a1919; }
+  footer .social {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; }
+    footer .social a {
+      padding: 10px;
+      margin: auto; }
+      footer .social a i {
+        color: whitesmoke;
+        font-size: 3vw; }
+      footer .social a .fab.fa-linkedin-in:hover {
+        color: #3996e2; }
+      footer .social a .fab.fa-youtube:hover {
+        color: #d82b25; }
+      footer .social a .fab.fa-github:hover {
+        color: #d1ad60; }
+      footer .social a .fab.fa-instagram:hover {
+        color: #a84039;
+        color: #d82b25; }
+      footer .social a .fab.fa-facebook-f:hover {
+        color: #5192e7; }
+  footer .footnote {
+    text-align: center;
+    color: #e7e7e7;
+    padding: 20px;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Indie Flower', cursive;
+    font-size: 17px; }
+
+.main-grid {
+  display: grid;
+  color: #0e0e0e;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 110vh 900px 900px 900px 200px;
+  grid-template-areas: "header header" "intro intro" "about-text about-map" "nasa-request-text nasa-request-photo" "footer footer"; }
+
+@media (min-width: 300px) and (max-width: 768px) {
+  html {
+    overflow-x: hidden !important; }
+
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 113vh 450px min-content 400px min-content auto 200px;
+    grid-template-areas: "header" "intro" "about-text" "about-map" "nasa-request-text" "nasa-request-photo" "footer"; }
+
+  header {
+    max-height: 100vh;
+    background-image: url(../../assets/imgs/mobile-cover.jpg);
+    background-color: none;
+    background-size: cover; }
+    header .logo {
+      display: block;
+      left: 30vw; }
+
+  header video {
+    display: none; }
+
+  header .header-heading {
+    color: white;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex; }
+
+  .header-heading .hgroup .flex {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-evenly; }
+    .header-heading .hgroup .flex .images {
+      margin-top: 20px; }
+
+  header .header-heading .hgroup h1 {
+    font-size: 7vw;
+    line-height: 6vh;
+    text-shadow: none; }
+
+  header .header-heading .hgroup .flex h2 {
+    font-size: 4.7vw;
+    max-width: 340px;
+    margin: 0 auto;
+    text-shadow: none; }
+
+  header .header-heading .hgroup a {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.5s;
+    margin: 28px 0 0 0;
+    display: inline-block;
+    max-width: 50%; }
+
+  header .header-heading .hgroup a:hover {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.5s;
+    margin: 28px 0 0 0;
+    display: inline-block;
+    max-width: 50%; }
+
+  header .logo {
+    display: block;
+    left: 36vw;
+    display: none; }
+
+  .intro article {
+    padding: 10px 0;
+    /* width: 80%; */
+    /* margin: 0 auto; */
+    width: 100%;
+    width: 100vw;
+    position: relative;
+    z-index: 10; }
+
+  .intro article h2 {
+    font-size: 5vw;
+    max-width: 63%;
+    text-align: center;
+    position: relative;
+    font-weight: 300;
+    margin: 0 auto; }
+
+  .intro article h2::before, .intro article h2::after {
+    display: none; }
+
+  .intro article iframe {
+    margin: 0 auto;
+    /* margin-top: 0px; */
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 30px;
+    width: 80%;
+    /* height: 84%; */
+    height: 273px; }
+
+  .about-text {
+    padding: 20px 0; }
+
+  .about-text article h3 {
+    color: #fffdfd;
+    font-size: 6vw;
+    font-weight: normal;
+    position: relative;
+    text-align: center; }
+    .about-text article h3 i {
+      display: none; }
+
+  .about-text article p {
+    font-size: 3.8vw;
+    color: #e9e9e9;
+    font-weight: normal;
+    text-align: center; }
+
+  .about-text article {
+    width: 80%;
+    margin: 80px auto -33px auto; }
+
+  .about-text article {
+    width: 80%;
+    margin: 40px auto; }
+
+  .nasa-request-text {
+    padding: 40px 0; }
+
+  .nasa-request-text h2::before, .nasa-request-text h2::after {
+    display: none; }
+
+  .nasa-request-text article {
+    padding: 40px 0px;
+    width: 85%;
+    margin: 0 auto; }
+    .nasa-request-text article .date {
+      margin: 0; }
+
+  .nasa-request-photo {
+    display: none; }
+
+  footer .footnote {
+    text-align: center;
+    color: #e7e7e7;
+    padding: 0px;
+    bottom: 0;
+    width: 65%;
+    margin: 0 auto; }
+
+  footer .social a {
+    padding: 10px;
+    margin: 10px; }
+
+  footer .social a i {
+    color: whitesmoke;
+    font-size: 7vw; } }
+@media (min-width: 481px) and (max-width: 768px) {
+  .about-text article p {
+    font-size: 2.9vw;
+    color: #e9e9e9;
+    font-weight: normal;
+    text-align: center; }
+
+  header .logo {
+    display: block;
+    left: 36vw;
+    display: none; } }
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-grid {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 50vh min-content 85vh 500px min-content 500px 200px;
+    grid-template-areas: "header header" "intro intro" "about-text about-text" "about-map about-map" "nasa-request-text nasa-request-text" "nasa-request-photo nasa-request-photo" "footer footer"; }
+
+  header {
+    height: unset; }
+
+  header .header-heading {
+    color: white;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 95vw;
+    height: 50vh;
+    display: flex; }
+
+  header .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 100px;
+    height: 75px; }
+
+  header video {
+    max-width: 100%;
+    opacity: 0.2;
+    max-height: 100%; }
+
+  .intro article iframe {
+    margin: 0 auto;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    text-align: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-top: 58px;
+    width: 500px;
+    height: 350px; }
+
+  .about-text article h3 {
+    color: #fffdfd;
+    font-size: 3.5vw;
+    font-weight: 300;
+    position: relative; }
+
+  .about-text article p {
+    font-size: 1.8vw;
+    color: white;
+    font-weight: 300; }
+
+  .nasa-request-text article {
+    padding: 50px 85px;
+    width: 93%;
+    margin: 0 auto; } }
+@media (min-width: 1025px) and (max-width: 1200px) {
+  .main-grid {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 50vh min-content 500px 500px 700px 500px 200px;
+    grid-template-areas: "header header" "intro intro" "about-text about-text" "about-map about-map" "nasa-request-text nasa-request-text" "nasa-request-photo nasa-request-photo" "footer footer"; }
+
+  header {
+    height: unset; }
+
+  header .header-heading {
+    color: white;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 95vw;
+    height: 50vh;
+    display: flex; }
+
+  .about-text article {
+    width: 50%;
+    margin: 0 auto;
+    margin: 40px;
+    /* padding: 0 0 0 110px; */
+    margin: 50px auto -33px auto; }
+
+  .about-text article p {
+    font-size: 1.3vw;
+    color: white;
+    font-weight: 300; }
+
+  .nasa-request-photo {
+    grid-area: nasa-request-photo;
+    width: 90%;
+    height: 89%;
+    background-size: auto;
+    position: relative;
+    background-position: top center;
+    /* display: none; */
+    margin: 0 auto;
+    /* padding: 10px; */ } }
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .main-grid {
+    display: grid;
+    grid-template-columns: 50vw 50vw;
+    grid-template-rows: 50vh min-content min-content min-content 700px 200px;
+    grid-template-areas: "header header" "intro intro" "about-text about-map" "nasa-request-text nasa-request-text" "nasa-request-photo nasa-request-photo" "footer footer"; }
+
+  header {
+    height: unset; }
+
+  header .header-heading {
+    color: white;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 95vw;
+    height: 50vh;
+    display: flex; }
+
+  .about-text article {
+    width: 63%;
+    margin: 0 auto;
+    margin: 40px;
+    /* padding: 0 0 0 110px; */
+    margin: 40px auto 40px auto; }
+
+  .about-text article p {
+    font-size: 1.1vw;
+    color: white;
+    font-weight: 300; }
+
+  .nasa-request-text article {
+    padding: 50px 37px;
+    width: 75%;
+    margin: 0 auto; } }
+
+/*# sourceMappingURL=app.css.map */

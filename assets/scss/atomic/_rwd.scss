@@ -1,0 +1,515 @@
+// 320px — 480px: Mobile devices.
+// 481px — 768px: iPads, Tablets.
+// 769px — 1024px: Small screens, laptops.
+// 1025px — 1200px: Desktops, large screens.
+// 1201px and more — Extra large screens, TV.
+
+
+
+@media (min-width:300px) and (max-width:768px){
+    // grid settings
+        html{
+            overflow-x: hidden !important;
+        }
+
+        .main-grid{
+            display: grid;
+            // grid-template-rows: ;
+            grid-template-columns: 1fr;
+            grid-template-rows: 113vh 450px min-content 400px min-content auto 200px;
+            grid-template-areas: 
+            "header"
+            "intro"
+            "about-text"
+            "about-map"
+            "nasa-request-text"
+            "nasa-request-photo"
+            "footer";
+        }
+
+
+    // end grid settings
+
+    // header
+        header {
+            max-height: 100vh;
+            background-image: url(../../assets/imgs/mobile-cover.jpg);
+            background-color: none;
+            background-size: cover;
+
+            .logo {
+                display: block;
+                left: 30vw;
+            }
+        }
+    
+        header video {
+           display: none;
+        }
+
+    
+
+        header .header-heading {
+            color: white;
+            position: absolute;
+            top: 0;
+            text-align: center;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+        }
+
+        .header-heading .hgroup .flex{
+            display: flex;
+
+            flex-direction: column-reverse;
+            justify-content: space-evenly;
+
+            .images{
+                margin-top: 20px;
+            }
+        }
+
+        header .header-heading .hgroup h1 {
+            font-size: 7vw;
+            line-height: 6vh;
+            text-shadow: none;
+        }
+
+        header .header-heading .hgroup .flex h2 {
+            font-size: 4.7vw;
+            max-width: 340px;
+            margin: 0 auto;
+            text-shadow: none;
+        }
+
+        header .header-heading .hgroup a {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.5s;
+            margin: 28px 0 0 0;
+            display: inline-block;
+            max-width: 50%;
+        }
+
+        header .header-heading .hgroup a:hover {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.5s;
+            margin: 28px 0 0 0;
+            display: inline-block;
+            max-width: 50%;
+        }
+
+        header .logo {
+            display: block;
+            left: 36vw;
+            display: none;
+        }
+   
+    
+    // end header
+
+
+    // intro 
+
+        .intro article {
+            padding: 10px 0;
+            /* width: 80%; */
+            /* margin: 0 auto; */
+            width: 100%;
+            width: 100vw;
+            position: relative;
+            z-index: 10;
+        }
+
+        .intro article h2 {
+            font-size: 5vw;
+            max-width: 63%;
+            text-align: center;
+            position: relative;
+            font-weight: 300;
+            margin: 0 auto;
+        }
+
+        .intro article h2::before,.intro article h2::after {
+            display: none;
+        }
+
+        .intro article iframe {
+            margin: 0 auto;
+            /* margin-top: 0px; */
+            margin-right: auto;
+            margin-bottom: 0px;
+            margin-left: auto;
+            text-align: center;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            margin-top: 30px;
+            width: 80%;
+            /* height: 84%; */
+            height: 273px;
+        }
+
+    // end intro
+
+
+
+    // about text
+
+        .about-text{
+            padding: 20px 0 ;
+        }
+
+        .about-text article h3 {
+            color: #fffdfd;
+            font-size: 6vw;
+            font-weight: normal;
+            position: relative;
+            text-align: center;
+
+            i{
+                display: none;
+            }
+        }
+
+        .about-text article p {
+            font-size: 3.8vw;
+            color: rgb(233, 233, 233);
+            font-weight: normal;
+            text-align: center;
+        }
+
+        .about-text article {
+            width: 80%;
+            margin: 80px auto -33px auto;
+        }
+
+        .about-text article {
+            width: 80%;
+            // /* margin: 80px auto -33px auto; */
+            margin: 40px auto;
+            // padding: 10px;
+        }
+  
+
+    // end about text
+
+    // nasa text request
+        .nasa-request-text{
+            padding: 40px 0;
+        }
+        
+        .nasa-request-text h2::before, .nasa-request-text h2::after{
+
+        
+            display: none;
+
+        }
+     
+        .nasa-request-text article {
+            padding: 40px 0px;
+            width: 85%;
+            margin: 0 auto;
+
+            .date{
+                margin: 0;
+            }
+              
+        }
+     //end nasa text request
+
+
+    //  nasa request photo
+    .nasa-request-photo{
+        display: none;
+    }
+
+    // end nasa request photo
+
+    //  footer
+        footer .footnote {
+            text-align: center;
+            color: #e7e7e7;
+            padding: 0px;
+            bottom: 0;
+            width: 65%;
+            margin: 0 auto;
+        }
+
+        footer .social a {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        footer .social a i {
+            color: whitesmoke;
+            font-size: 7vw;
+        }
+    // end footer
+}
+    
+
+
+@media (min-width:481px) and (max-width:768px){
+    .about-text article p {
+        font-size: 2.9vw;
+        color: #e9e9e9;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    header .logo {
+        display: block;
+        left: 36vw;
+        display: none;
+    }
+}
+
+@media (min-width:769px) and (max-width:1024px){
+          // grid settings
+          .main-grid{
+            display: grid;
+            // grid-template-rows: ;
+            grid-template-columns: 50vw 50vw ;
+            grid-template-rows: 50vh min-content 85vh 500px min-content 500px 200px;
+            grid-template-areas: 
+            "header header"
+            "intro intro"
+            "about-text about-text"
+            "about-map about-map"
+            "nasa-request-text nasa-request-text"
+            "nasa-request-photo nasa-request-photo"
+            "footer footer";
+            // row-gap: 10px;
+        }
+    
+        // end grid settings 
+
+        // header
+            header{
+                height: unset;
+            }
+        
+            header .header-heading {
+                color: white;
+                position: absolute;
+                top: 0;
+                text-align: center;
+                width: 95vw;
+                height: 50vh;
+                display: flex;
+            }
+
+            header .logo {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                width: 100px;
+                height: 75px;
+            }
+
+            header video {
+                max-width: 100%;
+                opacity: 0.2;
+                max-height: 100%;
+            }
+        
+
+
+        // end header
+
+        // start intro
+            .intro article iframe {
+                margin: 0 auto;
+                margin-top: 0px;
+                margin-right: auto;
+                margin-bottom: 0px;
+                margin-left: auto;
+                text-align: center;
+                display: flex;
+                align-content: center;
+                justify-content: center;
+                margin-top: 58px;
+                width: 500px;
+                height: 350px;
+            }
+        // end intro
+
+        // start about
+
+            .about-text article h3 {
+                color: #fffdfd;
+                font-size: 3.5vw;
+                font-weight: 300;
+                position: relative;
+            }
+
+            .about-text article p {
+                font-size: 1.8vw;
+                color: white;
+                font-weight: 300;
+            }
+        // end about
+
+        // nasa-text request
+            .nasa-request-text article {
+                padding: 50px 85px;
+                width: 93%;
+                margin: 0 auto;
+            }
+
+        // end nasa text request
+}
+
+@media (min-width:1025px) and (max-width:1200px){
+       // grid settings
+    .main-grid{
+        display: grid;
+        // grid-template-rows: ;
+        grid-template-columns: 50vw 50vw ;
+        grid-template-rows: 50vh min-content 500px 500px 700px 500px 200px;
+        grid-template-areas: 
+        "header header"
+        "intro intro"
+        "about-text about-text"
+        "about-map about-map"
+        "nasa-request-text nasa-request-text"
+        "nasa-request-photo nasa-request-photo"
+        "footer footer";
+        // row-gap: 10px;
+    }
+
+    // end grid settings
+
+    // start header
+
+    header{
+        height: unset;
+    }
+
+    header .header-heading {
+        color: white;
+        position: absolute;
+        top: 0;
+        text-align: center;
+        width: 95vw;
+        height: 50vh;
+        display: flex;
+    }
+
+
+    // end header
+
+    // start about text
+        .about-text article {
+            width: 50%;
+            margin: 0 auto;
+            margin: 40px;
+            /* padding: 0 0 0 110px; */
+            margin: 50px auto -33px auto;
+        }
+
+        .about-text article p {
+            font-size: 1.3vw;
+            color: white;
+            font-weight: 300;
+        }
+
+    // end about text
+
+
+
+    // nasa photo request
+        .nasa-request-photo {
+            grid-area: nasa-request-photo;
+            width: 90%;
+            height: 89%;
+            background-size: auto;
+            position: relative;
+            background-position: top center;
+            /* display: none; */
+            margin: 0 auto;
+            /* padding: 10px; */
+        }
+
+    // end nasa phot request
+
+}
+
+@media (min-width:1201px) and (max-width:1400px){
+    // grid settings
+    .main-grid{
+        display: grid;
+        // grid-template-rows: ;
+        grid-template-columns: 50vw 50vw ;
+        grid-template-rows: 50vh min-content min-content min-content 700px 200px;
+        grid-template-areas: 
+        "header header"
+        "intro intro"
+        "about-text about-map"
+        // "about-map"
+        "nasa-request-text nasa-request-text"
+        "nasa-request-photo nasa-request-photo"
+        "footer footer";
+    }
+
+    // end grid settings
+
+
+    // header   
+
+    header{
+        height: unset;
+    }
+
+    header .header-heading {
+        color: white;
+        position: absolute;
+        top: 0;
+        text-align: center;
+        width: 95vw;
+        height: 50vh;
+        display: flex;
+    }
+
+
+    // end header
+
+    // start about
+    .about-text article {
+        width: 63%;
+        margin: 0 auto;
+        margin: 40px;
+        /* padding: 0 0 0 110px; */
+        margin: 40px auto 40px auto;
+    }
+
+    .about-text article p {
+        font-size: 1.1vw;
+        color: white;
+        font-weight: 300;
+    }
+
+    // end about
+
+    // start nasa request
+  
+
+    .nasa-request-text article {
+        padding: 50px 37px;
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    // end nasa request
+}

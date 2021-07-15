@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Server AREX</title>
+    <link rel="stylesheet" href="assets/css/app.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/9903fb3d3a.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="main-grid">
+        <header>
+            <img src="./assets/imgs/logo.png" alt="" class="logo">
+      
+            <video src="assets/videos/video.mp4" autoplay loop></video>
+            <article class="header-heading">
+                <div class="hgroup">
+                   
+                        <h1>Introducing Server AREX</h1>
+                    <div class="flex">
+                        <div class="images">
+                            <img src="./assets/imgs/nasa.jpeg" alt="">
+                            <img src="./assets/imgs/apache.jpeg" alt="">
+                        </div>
+                        <h2>Nasa's Web API Space Exploration System</h2>
+                    </div>
+
+                    <a href="#about">Learn More</a>
+
+                </div>
+
+               
+            </article>
+
+        </header>
+
+       
+        <section class="intro">
+            <article>
+                <h2>ONE GIANT LEAP FOR MANKIND</h2>
+                <iframe width="660" height="415" src="https://www.youtube.com/embed/hxPbnFc7iU8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     
+
+            </article>
+          
+        </section>
+    
+        <section class="about-text" id="about">
+            <article>
+                <h3><i class="fas fa-rocket"></i> What is Server AREX</h3>
+                <p>Server <strong>AREX</strong> is an opensource project which merges a variety of 
+                    technological tools with an objective to achieve connectivity to 
+                    <strong>NASA's server</strong> open data. Connectivity will be established through 
+                    the use of a Web API that makes available to the public the 
+                   <strong>"Picture of the Day" </strong> preview and download from NASA's server.
+                </p>
+            </article>
+
+            <article>
+                <h3><i class="fas fa-rocket"></i> Purpose</h3>
+                <p>Exploration and freedom of speech is a human right. We all are part 
+                    of a whole, <strong>195 countries worldwide</strong>, with <strong>7.594 billion</strong> people 
+                    living and breathing on planet earth. Server AREX aims to bring 
+                    awareness and inspiration to people from around the globe to come up with creative and innovative ideas against <strong>COVID-19.</strong>
+                </p>
+            </article>
+
+            <article>
+                <h3><i class="fas fa-rocket"></i> Call to Action</h3>
+                <p> World Wide Web, we have achieved <strong>marvelous</strong> things since the invention of ARPANET. If you are a PhD student doing a theses relevant to COVID-19, do not hesitate to contact us at <strong>server-arex@gmail.com</strong> to host and share your <strong>research</strong> on the Internet for free.
+                </p>
+            </article>
+
+            <!-- <article>
+                <h3><i class="fas fa-rocket"></i> Location</h3>
+                <p>Cyprus Limassol Arakapas, 4563</p>
+            </article>
+            -->
+
+        </section>
+
+        <section class="about-map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15703752.101912083!2d20.192088645809996!3d38.95389279767567!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14e0b4832c905eb5%3A0x15c09de8c09847e!2sArakapas!5e1!3m2!1sen!2s!4v1597873394744!5m2!1sen!2s" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+        </section>
+            
+        <section class="nasa-request-text">
+            <h2>Picture of the Day</h2>
+            <article>
+                <h3 class="title"></h3>
+                <h4 class="date"></h4>
+                <p class="pic-description"></p>
+                <a href="" class="download"></a>
+            </article>
+            
+          
+        </section>
+
+        <section class="nasa-request-photo">         
+
+        </section>
+
+        <footer>
+            <div class="social">
+                <a target="_blank" href="https://www.linkedin.com/in/costasnicou/"><i class="fab fa-linkedin-in"></i></a>
+                <a target="_blank" href="https://www.youtube.com/channel/UCd3V3yviq7l5FIiI0BqkVdw?view_as=subscriber"><i class="fab fa-youtube"></i></a>
+                <a target="_blank" href="https://github.com/costasnicou"><i class="fab fa-github"></i></a>              
+                <a target="_blank" href="https://www.instagram.com/costas.nicou/?hl=en"><i class="fab fa-instagram"></i></a>
+                <a target="_blank" href="https://www.facebook.com/costas.nicou.718/"><i class="fab fa-facebook-f"></i></a>
+
+            </div>
+
+            <p class="footnote">&copy;	2020 Costas Nicou <br>Front End Web Developer & Linux Red Hat System Admin</p>
+            
+        </footer>
+
+    </div>
+
+    <script src="script.js" defer></script>
+
+    <!-- smooth scrolling -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+        // Add smooth scrolling to all links
+            $("a").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 1500, function(){
+
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+            } // End if
+             });
+        });
+    </script>
+</body>
+</html>

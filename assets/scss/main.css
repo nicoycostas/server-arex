@@ -1,0 +1,145 @@
+
+html,body{
+
+    padding: 0;
+    margin: 0;
+    font-family: Roboto;
+}
+
+section{
+  padding: 0 50px;
+}
+
+article{
+  /* padding: 0 0 100px 0; */
+}
+
+video{
+   
+    width: 100%;
+    background-size: cover;
+    top:0;
+    bottom: 0;
+    height: 100%;
+    left:0;
+    right: 0;
+   
+}
+
+/* intro section
+-------------------- */
+.intro {
+	position: absolute;
+	top: 36%;
+	left: 40%;
+	color: white;
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.intro h2, .intro p{
+    font-weight: 300;
+}
+.techs{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.techs img{
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+}
+
+#access{
+    color: rgb(31, 133, 0);
+}
+
+a#know_more{
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 10px;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+a#know_more:hover{
+  background-color: white;
+  border: 1px solid rgb(133, 133, 218);
+  color: black;
+}
+
+/*end intro section
+-------------------- */
+
+
+/* start about */
+
+
+
+
+/* end about */
+
+
+
+
+
+
+nasa picture of the day api
+.nasa-api{
+  text-align: center;
+  padding-top: 50px;
+}
+
+
+.nasa-api-wrapper{
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 40px;
+}
+
+
+.explanation{
+  padding: 10px 50px 0 0;
+  text-align: left;
+  font-weight: 300;
+  line-height: 22px;
+}
+
+/* end nasa picture of the day api */
+
+
+
+
+/* end rovers sections
+------------------- */
+
+@media (min-width:300px) and (max-width:550px){
+    .intro{
+     
+        width: 80%;
+        margin: 0 auto;
+        position: static;
+        color: black;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .techs {
+      display: flex;
+      justify-content: flex-start;
+      margin-top: 30px;
+      width: 50%;
+      margin: 0 auto;
+  }
+
+  a#know_more{
+    background-color: white;
+    border: 1px solid rgb(36, 36, 37);
+    color: black;
+  }
+}

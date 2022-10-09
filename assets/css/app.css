@@ -605,6 +605,9 @@ footer {
     width: 100%;
     font-family: 'Indie Flower', cursive;
     font-size: 17px; }
+    footer .footnote a {
+      text-decoration: none;
+      color: #e7e7e7; }
 
 .main-grid {
   display: grid;

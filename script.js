@@ -28,3 +28,6 @@ nasarequest.onload = function(){
 
 nasarequest.send();
 
+// Get year dynamically
+const year = new Date();
+document.getElementById("year").innerHTML = year.getFullYear();
